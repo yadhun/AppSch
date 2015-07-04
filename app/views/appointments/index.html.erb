@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Listing Appointments</h1>
+  <div class="text-center">
+    <h1><%= link_to 'New Appointment', "appointments/home",:class =>"btn btn-default btn-lg"%></h1>
+  </div>
+  <p id="notice"><%= notice %></p>
+  <div class="well">
+
+    <div class="container">
+      <table class="table" width="100%" align="center">
+        <thead>
+        <tr>
+          <th>Department</th>
+          <th>Doctor</th>
+          <th>Date </th>
+          <th>Time</th>
+          <th>user</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @appointments.each do |appointment| %>
+                <% if current_user.email==appointment.email %>
+            <tr>
+              <td><%= appointment.department.name %></td>
+              <td><%= appointment.doctor_id %></td>
+              <td><%= appointment.date_of_appointment %></td>
+              <td><%= appointment.time_of_appointment %></td>
+              <td><%= appointment.email %></td>
+                <%end%>
+        <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+

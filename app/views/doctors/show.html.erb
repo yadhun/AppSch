@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="well">
+
+    <div class="page-header">
+
+      <p id="notice"><%= notice %></p>
+      <h1>review your Appointment</h1>
+      <p class="lead">
+        Doctor Name:<strong><%= @doctor.name %></strong>
+      </p>
+
+      <p class="lead">
+        Available on:<strong><%= @doctor.available_on %></strong>
+      </p>
+
+      <p class="lead">
+        Department:<strong><%= @doctor.department.name %></strong>
+      </p>
+
+    </div>
+  </div>
+  <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+  <%= link_to 'Back', doctors_path %>
+</div>
+
+
+
+

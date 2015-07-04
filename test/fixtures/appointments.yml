@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  department_id: 
+  doctor_id: 
+  date_of_appointment: 2015-07-02
+  time_of_appointment: MyString
+
+two:
+  department_id: 
+  doctor_id: 
+  date_of_appointment: 2015-07-02
+  time_of_appointment: MyString

@@ -1,0 +1,28 @@
+
+<div class="container">
+  <h1>Listing all departments</h1>
+  <div class="well">
+    <table class="table" width="100%">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Morning opens at</th>
+        <th>Evening opens at</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @departments.each do |department| %>
+          <tr>
+            <td><%= link_to department.name ,new_appointment_path(:department=>department.id),:class => "btn btn-success btn-lg btn-lg"%></td>
+            <td><%= department.morning_opens_at.strftime("%I:%M%P" ) %></td>
+            <td><%= department.evening_opens_at.strftime("%I:%M%P" ) %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+
+
+
+</div>

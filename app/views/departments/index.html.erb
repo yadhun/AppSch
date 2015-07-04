@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="text-center">
+    <h1>Listing Departments</h1>
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="well">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Morning opens at</th>
+        <th>Evening opens at</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @departments.each do |department| %>
+          <tr>
+            <td><%= department.name %></td>
+            <td><%= department.morning_opens_at.strftime("%I:%M%P") %></td>
+            <td><%= department.evening_opens_at.strftime("%I:%M%P") %></td>
+            <td><%= link_to 'Show', department %></td>
+            <td><%= link_to 'Edit', edit_department_path(department) %></td>
+            <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<div class="text-center">
+  <%= link_to 'New Department', new_department_path, :class=>"btn btn-primary btn-lg" %>
+</div>
+

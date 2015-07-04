@@ -1,0 +1,50 @@
+@import "twitter/bootstrap/bootstrap";
+
+// Set the correct sprite paths
+@iconSpritePath: image-url("twitter/bootstrap/glyphicons-halflings.png");
+@iconWhiteSpritePath: image-url("twitter/bootstrap/glyphicons-halflings-white.png");
+
+// Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
+@fontAwesomeEotPath: font-url("fontawesome-webfont.eot");
+@fontAwesomeEotPath_iefix: font-url("fontawesome-webfont.eot?#iefix");
+@fontAwesomeWoffPath: font-url("fontawesome-webfont.woff");
+@fontAwesomeTtfPath: font-url("fontawesome-webfont.ttf");
+@fontAwesomeSvgPath: font-url("fontawesome-webfont.svg#fontawesomeregular");
+
+// Font Awesome
+@import "fontawesome/font-awesome";
+
+// Glyphicons
+//@import "twitter/bootstrap/glyphicons.less";
+
+// Your custom LESS stylesheets goes here
+//
+// Since bootstrap was imported above you have access to its mixins which
+// you may use and inherit here
+//
+// If you'd like to override bootstrap's own variables, you can do so here as well
+// See http://twitter.github.com/bootstrap/customize.html#variables for their names and documentation
+//
+// Example:
+// @link-color: #ff0000;
+
+@body-bg: #000000;
+@well-bg: #50b9c8;
+@font-size-base: 24px ;
+@navbar-height:80px;
+@navbar-font-size: 30px;
+@base: #f938ab;
+@input-border-radius:5px;
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}

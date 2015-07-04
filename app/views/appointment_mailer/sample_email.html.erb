@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Hi <%= @user.firstname %></h1>
+
+<p>
+<h1>review your Appointment</h1>
+<p>
+  Department:<strong><%= @appointment.department.name %></strong>
+</p>
+
+<p>
+  Doctor:<%= @appointment.doctor.name %>
+</p>
+
+<p>
+  Date of appointment:<%= @appointment.date_of_appointment.strftime("%d/%m/%y" ) %>
+</p>
+
+<p>
+  Time of appointment:<%= @appointment.time_of_appointment %>
+</p>
+</body>
+</html>

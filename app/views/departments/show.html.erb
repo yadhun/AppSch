@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="well">
+
+    <div class="page-header">
+
+      <p id="notice"><%= notice %></p>
+      <h1>review your Appointment</h1>
+      <p class="lead">
+       Department Name:<strong><%= @department.name %></strong>
+      </p>
+
+      <p class="lead">
+        Morning opens at:<strong><%= @department.evening_opens_at %></strong>
+      </p>
+
+      <p class="lead">
+        Evening opens at:<strong><%= @department.morning_opens_at %></strong>
+      </p>
+
+      <p class="lead">
+        Time of appointment:<%= @appointment.time_of_appointment %>
+      </p>
+    </div>
+
+
+    <%= link_to 'Edit', edit_department_path(@department) %> |
+    <%= link_to 'Back', departments_path %>
+
+  </div>
+
+</div>
