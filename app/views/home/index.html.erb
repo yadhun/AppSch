@@ -1,18 +1,18 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="/images/img1.jpg" width="100%" height="30%">
+      <img src="/images/img1.jpg" width="100%" >
     </div>
     <div class="item">
-      <img src="/images/img2.jpg" width="100%" height="30%">
+      <img src="/images/img2.jpg" width="100%">
     </div>
     <div class="item">
-      <img src="/images/img3.jpg" width="100%" height="30%">
+      <img src="/images/img3.jpg" width="100%">
     </div>
   </div>
 </div>
@@ -37,10 +37,9 @@
       <h4>hello,<%= current_user.firstname%></h4>
       <ul><h5>
 
-        <li><%= current_user.sex%></li>
         <li>Blood group:<%= current_user.blood_group%></li>
         <li>contact:<%= current_user.phone_no%></li>
-        <li>Address:<%= current_user.address%></li>
+
       </h5>
 
       </ul>
